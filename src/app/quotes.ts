@@ -1,13 +1,14 @@
-export class Quotes {
+export class Quote {
+
     id: number;
     name: string;
     publisher: string;
     quote: string;
-    date: number;
+    date: Date;
     upvotes: number;
     downvotes: number;
 
-    constructor (id:number, name: string, publisher: string, quote: string, date: number, upvotes: number, downvotes: number) {
+    constructor (id:number, name: string, publisher: string, quote: string, date: Date, upvotes: number, downvotes: number) {
         this.id = id;
         this.name = name;
         this.publisher = publisher;
