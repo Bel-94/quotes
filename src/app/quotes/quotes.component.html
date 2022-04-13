@@ -1,8 +1,16 @@
-<div class="container bg-dark text-light vh-100 width-cover">
+<div class="container" id="section1">
+  <h1 class="title">Siku Njema-Quotes</h1>
+  <p class="p1">Welcome to your daily affirmation quotes. Keeping you motivated all day long!</p>
+</div>
+<div class="container" id="section2">
+  <h2>Popular Quotes</h2>
     <div>
         <div class="row">
           <div class="col-md-6">
             <div *ngFor = "let quote of quotes" >{{quote.quote}} </div>
+
+            <!-- Toggle-button -->
+            <button class="btn btn-primary" (click)='Show Details (i)'>Show Details</button>
           </div>
           <div class="col-md-6">
             <app-quotes-form></app-quotes-form>
