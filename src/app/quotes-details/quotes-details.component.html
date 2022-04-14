@@ -1,0 +1,10 @@
+<div class="quotes-detail">
+    <p>By: {{quote.name}}</p>
+    <p>Published By: {{quote.publisher}}</p>
+    <p>Time Elapsed: {{timeElapsed(quote.date)}}</p>
+    <div>
+        <p (click)= "like()">Upvotes: {{quote.upvotes}}</p>
+        <p (click)="dislike()" >Downvotes: {{quote.downvotes}}</p>
+    </div>
+    <button type="text" class="btn btn-danger" (click)="deleteQuote(true)" >Delete</button>
+  </div>

@@ -2,19 +2,15 @@
     <form>
         <div class="form-group">
             <label>Author</label>
-            <input type="text" class="form-control">
+            <input #fauthor type="text" class="form-control">
         </div>
         <div class="form-group">
             <label>Published By</label>
-            <input type="text" class="form-control">
+            <input #fpublisher type="text" class="form-control">
         </div>
         <div class="form-group">
             <label>Quote</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="form-group">
-            <label>Date</label>
-            <input type="date" class="form-control">
+            <input #fquote type="text" class="form-control">
         </div><br>
-        <button type="submit" class="btn btn-primary">Submit Quote</button>
+        <button (click)="submitQuote(fauthor.value, fpublisher.value, fquote.value)" type="submit" class="btn btn-primary">Submit Quote</button>
     </form>

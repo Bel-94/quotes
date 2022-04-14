@@ -7,13 +7,17 @@
     <div>
         <div class="row">
           <div class="col-md-6">
-            <div *ngFor = "let quote of quotes" >{{quote.quote}} </div>
+            <div *ngFor = "let quote of quotes; let i = index" > 
+              <p>{{quote.quote}}</p>
+              <button class="btn btn-primary" (click)='showDetails (i)'>{{quote.toggleText}}</button>
+              <app-quotes-details *ngIf = "quote.details === true" [quote] = "quote" (delete)="delete($event,i)" ></app-quotes-details>
+              
+            </div>
 
-            <!-- Toggle-button -->
-            <button class="btn btn-primary" (click)='Show Details (i)'>Show Details</button>
+            
           </div>
           <div class="col-md-6">
-            <app-quotes-form></app-quotes-form>
+            <app-quotes-form (addQuote)="addQuote($event)" ></app-quotes-form>
           </div>
         </div>
       </div>
