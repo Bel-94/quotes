@@ -5,8 +5,66 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value:any): any {
+    let currentDate:any = new Date ();
+    let differenceInSeconds = (currentDate-value)/1000;
+
+    // calculating time in a year
+    let interval = differenceInSeconds/31536000;
+    if (interval>2) {
+      return `${Math.floor(interval)} years ago`
+    }
+
+     interval = differenceInSeconds/31536000;
+    if (interval>1) {
+      return `${Math.floor(interval)} year ago`
+    }
+
+    // calculating time in a month
+     interval = differenceInSeconds/2592000;
+    if (interval>2) {
+      return `${Math.floor(interval)} months ago`
+    }
+
+     interval = differenceInSeconds/2592000;
+    if (interval>1) {
+      return `${Math.floor(interval)} month ago`
+    }
+
+    // calculating time in a day
+     interval = differenceInSeconds/86400;
+    if (interval>2) {
+      return `${Math.floor(interval)} days ago`
+    }
+
+     interval = differenceInSeconds/86400;
+    if (interval>1) {
+      return `${Math.floor(interval)} day ago`
+    }
+
+    // calculating time in an hour
+     interval = differenceInSeconds/3600;
+    if (interval>2) {
+      return `${Math.floor(interval)} hours ago`
+    }
+
+     interval = differenceInSeconds/3600;
+    if (interval>1) {
+      return `${Math.floor(interval)} hour ago`
+    }
+
+    // calculating time in minutes
+     interval = differenceInSeconds/60;
+    if (interval>2) {
+      return `${Math.floor(interval)} minutess ago`
+    }
+
+     interval = differenceInSeconds/60;
+    if (interval>1) {
+      return `${Math.floor(interval)} minute ago`
+    }
+      return 'Just Now'
+    console.log(differenceInSeconds)
   }
 
 }

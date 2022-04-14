@@ -1,14 +1,14 @@
 <div class="container" id="section1">
-  <h1 class="title">Siku Njema-Quotes</h1>
+  <h1 class="title" style="color:white">Siku Njema-Quotes</h1>
   <p class="p1">Welcome to your daily affirmation quotes. Keeping you motivated all day long!</p>
 </div>
 <div class="container" id="section2">
-  <h2 style="color:brown">Popular Quotes</h2>
+  <h2 style="color: white">Popular Quotes</h2>
     <div>
         <div class="row">
           <div class="col-md-6">
             <div *ngFor = "let quote of quotes; let i = index" > 
-              <p>{{quote.quote}}</p>
+              <p class="q-text">{{quote.quote}}</p>
               <button class="btn btn-primary" (click)='showDetails (i)'>{{quote.toggleText}}</button>
               <app-quotes-details *ngIf = "quote.details === true" [quote] = "quote" (delete)="delete($event,i)" ></app-quotes-details>
               

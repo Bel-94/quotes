@@ -1,7 +1,7 @@
 <div class="quotes-detail">
     <p>By: {{quote.name}}</p>
     <p>Published By: {{quote.publisher}}</p>
-    <p>Time Elapsed: {{timeElapsed(quote.date)}}</p>
+    <p>Time Elapsed: {{timeElapsed(quote.date|dateCount)}}</p>
     <div>
         <p (click)= "like()">Upvotes: {{quote.upvotes}}</p>
         <p (click)="dislike()" >Downvotes: {{quote.downvotes}}</p>
