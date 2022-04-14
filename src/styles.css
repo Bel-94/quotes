@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    background-image: url(https://unsplash.com/photos/vb2qWEax4pM);
+    background-image: url('src/assets/bg5avif');
+    background-size: cover;
 }
