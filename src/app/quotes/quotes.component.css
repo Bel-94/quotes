@@ -1,5 +1,5 @@
 .title {
-    color: blueviolet;
+    color:#c5cbe3;
     text-align: center;
 }
 
@@ -9,12 +9,8 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* #section1 {
-    background-color: #C2B9B0;
-}
 
-#section2 {
-    background-color: #E7717D;
-    
-    
-} */
+.q-text {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

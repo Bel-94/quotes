@@ -1,10 +1,11 @@
-<div class="quotes-detail">
-    <p>By: {{quote.name}}</p>
-    <p>Published By: {{quote.publisher}}</p>
-    <p>Time Elapsed: {{timeElapsed(quote.date|dateCount)}}</p>
+<div class="quotes-detail" style="pt-5px">
+    <p class="details">By: {{quote.name}}</p>
+    <p class="details">Published By: {{quote.publisher}}</p>
+    <p class="details">Time Elapsed: {{timeElapsed(quote.date|dateCount)}}</p>
     <div>
-        <p (click)= "like()">Upvotes: {{quote.upvotes}}</p>
-        <p (click)="dislike()" >Downvotes: {{quote.downvotes}}</p>
+        <!-- <p (click)= "like()"  *ngIf="quote.upvotes ==1"appHighlight >Upvotes: {{quote.upvotes}}</p> -->
+        <p class="details" (click)="like()"><i class="fa-solid fa-thumbs-up fa-2xl"></i> : {{quote.upvotes}}</p><br>
+        <p class="details" (click)="dislike()" ><i class="fa-solid fa-thumbs-down fa-2xl"></i> : {{quote.downvotes}}</p>
     </div>
     <button type="text" class="btn btn-danger" (click)="deleteQuote(true)" >Delete</button>
   </div>

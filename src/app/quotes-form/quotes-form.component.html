@@ -1,15 +1,15 @@
-    <h2 style="color:white">Create a Quote</h2>
+    <h2 style="color:#c5cbe3">Create a Quote</h2>
     <form>
         <div class="form-group">
-            <label>Author</label>
+            <label class="author">Author</label>
             <input #fauthor type="text" class="form-control">
-        </div>
+        </div><br>
         <div class="form-group">
-            <label>Published By</label>
+            <label class="publisher">Published By</label>
             <input #fpublisher type="text" class="form-control">
-        </div>
+        </div><br>
         <div class="form-group">
-            <label>Quote</label>
+            <label class="quote">Quote</label>
             <input #fquote type="text" class="form-control">
         </div><br>
         <button (click)="submitQuote(fauthor.value, fpublisher.value, fquote.value)" type="submit" class="btn btn-primary">Submit Quote</button>
