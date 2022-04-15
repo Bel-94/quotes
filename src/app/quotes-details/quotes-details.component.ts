@@ -24,7 +24,7 @@ export class QuotesDetailsComponent implements OnInit {
     this.quote.downvotes+=1;
   }
 
-  timeElapsed(time:any){
+  timeElapsed(time:any):number{
     let currentTime:any=new Date()
     return (currentTime-time)
   }

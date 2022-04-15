@@ -5,14 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value:any): any {
-    let currentDate:any = new Date ();
-    let differenceInSeconds = (currentDate-value)/1000;
+  transform(value:number): string {
+    let differenceInSeconds = value/1000;
 
     // calculating time in a year
     let interval = differenceInSeconds/31536000;
     if (interval>2) {
       return `${Math.floor(interval)} years ago`
+    
     }
 
      interval = differenceInSeconds/31536000;
@@ -56,7 +56,7 @@ export class DateCountPipe implements PipeTransform {
     // calculating time in minutes
      interval = differenceInSeconds/60;
     if (interval>2) {
-      return `${Math.floor(interval)} minutess ago`
+      return `${Math.floor(interval)} minutes ago`
     }
 
      interval = differenceInSeconds/60;
@@ -64,7 +64,7 @@ export class DateCountPipe implements PipeTransform {
       return `${Math.floor(interval)} minute ago`
     }
       return 'Just Now'
-    console.log(differenceInSeconds)
+    // console.log(differenceInSeconds)
   }
 
 }

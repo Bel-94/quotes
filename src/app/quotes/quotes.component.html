@@ -1,8 +1,8 @@
-<div class="container" id="section1">
+<div class="container">
   <h1 class="title">Siku Njema-Quotes</h1>
   <p class="p1" style='color:white' >Welcome to your daily affirmation quotes. Keeping you motivated all day long!</p>
 </div>
-<div class="container" id="section2">
+<div class="container">
   <h2 style="color: #c5cbe3">Popular Quotes</h2>
     <div>
         <div class="row">
@@ -13,12 +13,23 @@
               <app-quotes-details *ngIf = "quote.details === true" [quote] = "quote" (delete)="delete($event,i)" ></app-quotes-details>
               
             </div>
-
-            
           </div>
+          
           <div class="col-md-6">
             <app-quotes-form (addQuote)="addQuote($event)" ></app-quotes-form>
           </div>
         </div>
       </div>
+      
+</div>
+
+<div>
+  <footer>
+    <div class="row">
+      <h3 style="color:white">Contact Us</h3><br>
+      <p><i class="fa-brands fa-github fa-2xl">Bel-94</i></p>
+      <p><i class="fa-brands fa-facebook fa-2xl">Belinda Ntinyari</i></p>
+      <p><i class="fa-duotone fa-circle-envelope">ntinyaribelinda@gmail.com</i></p>
+    </div>
+  </footer>
 </div>
