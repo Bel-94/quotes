@@ -32,6 +32,10 @@ CSS
 JavaScript
 Typescript
 
+## Installation Requirements
+A computer, phone, tablet or any other tech gadget of your choice. 
+An access to the Internet
+
 ## Further help
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
