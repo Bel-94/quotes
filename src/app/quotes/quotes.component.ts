@@ -37,6 +37,19 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(value)
   }
 
+  highVotes(){
+    let mostLikes = [];
+    let topvotes:number;
+    for (let i=0; i<this.quotes.length; i++){
+      mostLikes.push(this.quotes[i].upvotes)
+    }
+    mostLikes.sort(function(a,b){
+      return b-a
+    })
+    topvotes=mostLikes[0]
+    return topvotes
+  }
+
 
   constructor() { }
 
